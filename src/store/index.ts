@@ -24,12 +24,10 @@ const enhancer = composeEnhancers(
   applyMiddleware(...middlewares)
   // other store enhancers if any
 );
-
 const persistConfig = {
   key: 'app',
   storage
 };
-
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export default function configStore() {
